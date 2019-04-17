@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/order.scss">
+
   </head>
   <body>
       <nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
@@ -38,7 +40,7 @@
                 <div class="row d-flex">
                   <div class="col-md-4 pr-4 d-flex topper align-items-center">
                     <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
-                    <span class="text">Direccion: <br/>Providencia Numero 333</span>
+                    <span class="text">Direccion: </br>Providencia Numero 333</span>
                   </div>
                   <div class="col-md pr-4 d-flex topper align-items-center">
                     <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
@@ -46,7 +48,7 @@
                   </div>
                   <div class="col-md pr-4 d-flex topper align-items-center">
                     <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-                    <span class="text">Telefono: <br/>>+56 999 999 99</span>
+                    <span class="text">Telefono: </br>+56 999 999 99</span>
                   </div>
                 </div>
               </div>
@@ -68,12 +70,15 @@
           <a href="index.html" class="btn btn-secondary py-2 px-3">Volver pagina principal</a></p>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav mr-auto">
-	        	<li class="nav-item"><a href="index.html" class="nav-link pl-0">Pagina principal</a></li>
+            <li class="nav-item"><a href="#" class="nav-link pl-0">Información General</a></li>
+	        	<li class="nav-item"><a href="#" class="nav-link pl-0">Orden de pedido</a></li>
+	        	<li class="nav-item"><a href="#" class="nav-link pl-0">-</a></li>
+
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
-    <!-- END nav -->
+    <!-- END nav -->    
     <section class="hero-wrap hero-wrap-2" 
           style="background-image: url('images/bg_1.jpg');" 
           data-stellar-background-ratio="0.8"
@@ -82,40 +87,86 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Login</h1>
-            <p class="breadcrumbs"><span class="mr-2">Principal > <span>Login  </span></p>
+            <h1 class="mb-2 bread">Proveedores</h1>
+            <p class="breadcrumbs"><span class="mr-2">Principal > <span>Proveedor</span></p>
           </div>
         </div>
       </div>
     </section>
-		<!-- END Header -->
-    
-    <div class="login-page" id="login">
-        <div class="form">
-          <form class="register-form">
-            <p>
-              Contactanos al +56 999 999 999
-            </p>
-            <p class="message">¿Proveedor ya registrado?<br/>>
-              <a href="#head" 
-              style="
-                    font-size: 25px; 
-                    font-weight: 300;
-                    "
-                    >
-                    Volver
-              </a></p>
+    </br>
+	  <!-- END Header -->
+    <div class="container">
+        <form id="formUsuario" name="form3" method="POST" action="">
+                <table>
+                    <tr>
+                        <th>RUT</th>
+                        <th>Rubro</th>
+                        <th>Razón Social</th>
+                        <th>Dirección</th>
+                        <th>Email</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                          <input type="text" id="rut" name="rut" value=""  required>
+                          <td><input type="text" id="rubro" name="rubro"  required></td>
+                          <td><input type="text" id="razon" name="razon" required> </td>
+                          <td><input type="text" id="direccion" name="direccion" required> </td>
+                          <td><input type="text" id="email" name="email"  required></td>			
+                        </td>	
+                </table>
+
           </form>
-          <form class="login-form">
-            <input type="text" placeholder="Nombre usuario"/>
-            <input type="password" placeholder="password"/>
-            <button type="submit" formaction="proveedores.html">Entrar</button>
-            <p class="message">¿Proveedor no registrado? <a href="#">Contáctanos</a></p>
-          </form>
+      </div>
+    </br>
+      <div>
+        <div id="table" class="table-editable">
+          <span class="table-add glyphicon glyphicon-plus"></span>
+          <table class="table">
+            <tr>
+              <th>Order N°</th>
+              <th>Título</th>
+              <th>Cantidad</th>
+              <th>Fecha</th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr>
+                <td contenteditable="true">sin n°</td>
+                <td contenteditable="true">Sin título</td>
+                <td contenteditable="true">sin cantidad</td>
+                <td contenteditable="true">Sin fecha</td>
+              <td>
+                <span class="table-remove glyphicon glyphicon-remove"></span>
+              </td>
+              <td>
+                <span class="table-up glyphicon glyphicon-arrow-up"></span>
+                <span class="table-down glyphicon glyphicon-arrow-down"></span>
+              </td>
+            </tr>
+            <!-- Aqui va la tabla para clonar -->
+            <tr class="hide">
+              <td contenteditable="true">sin n°</td>
+              <td contenteditable="true">Sin título</td>
+              <td contenteditable="true">sin cantidad</td>
+              <td contenteditable="true">Sin fecha</td>
+              <td>
+                <span class="table-remove glyphicon glyphicon-remove"></span>
+              </td>
+              <td>
+                <span class="table-up glyphicon glyphicon-arrow-up"></span>
+                <span class="table-down glyphicon glyphicon-arrow-down"></span>
+              </td>
+            </tr>
+          </table>
         </div>
+        Exportacion data JSON <br/>
+        <button id="export-btn" class="btn btn-primary">Exportar</button>
+        <p id="export"></p>
+      </div>
       </div>
 
-    
+       
     <!-- footer nav-->
     <footer class="ftco-footer ftco-bg-dark ftco-section">
         <div class="container">
@@ -256,6 +307,8 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/login.js"></script> 
+  <script src="js/login.js"></script>
+  <script src="js/export.js"></script>
+
   </body>
 </html>
