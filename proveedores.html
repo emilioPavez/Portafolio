@@ -87,8 +87,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Proveedores</h1>
-            <p class="breadcrumbs"><span class="mr-2">Principal > <span>Proveedor</span></p>
+            <h1 class="mb-2 bread">Bienvenido</h1>
+            <p class="breadcrumbs"><span class="mr-2">Se encuentra en la sección de <span>Proveedor</span></p>
           </div>
         </div>
       </div>
@@ -107,12 +107,12 @@
                     </tr>
                     
                     <tr>
-                        <td>
-                          <input type="text" id="rut" name="rut" value=""  required>
-                          <td><input type="text" id="rubro" name="rubro"  required></td>
-                          <td><input type="text" id="razon" name="razon" required> </td>
-                          <td><input type="text" id="direccion" name="direccion" required> </td>
-                          <td><input type="text" id="email" name="email"  required></td>			
+                        <td contenteditable="false">
+                          <input type="text" id="rut" name="rut" value="77.500.250-9">
+                          <td><input type="text" id="rubro" name="rubro" value="LSonrisa S.A." required></td>
+                          <td><input type="text" id="razon" name="razon" value="Clinica" required> </td>
+                          <td><input type="text" id="direccion" name="direccion" value="Psj 11, calle 10" required> </td>
+                          <td><input type="email" id="email" name="email" value="info@lindasonrisa.cl" required></td>			
                         </td>	
                 </table>
 
@@ -125,17 +125,21 @@
           <table class="table">
             <tr>
               <th>Order N°</th>
-              <th>Título</th>
-              <th>Cantidad</th>
-              <th>Fecha</th>
-              <th></th>
-              <th></th>
+              <th>Sucursal</th>
+              <th>Fecha Pedido</th>
+              <th>Fecha Entrega</th>
+              <th>PDF</th>
+              <th>¿Recibido?</th>
+              <th>Estado</th>
             </tr>
             <tr>
-                <td contenteditable="true">sin n°</td>
-                <td contenteditable="true">Sin título</td>
-                <td contenteditable="true">sin cantidad</td>
-                <td contenteditable="true">Sin fecha</td>
+                <td contenteditable="false">01</td>
+                <td contenteditable="false">Providencia</td>
+                <td contenteditable="false">25/05/2019</td>
+                <td contenteditable="true">28/05/2019</td>
+                <td contenteditable="false">Archivo</td>
+                <td contenteditable="false">o</td>
+                <td contenteditable="false">Pendiente</td>
               <td>
                 <span class="table-remove glyphicon glyphicon-remove"></span>
               </td>
@@ -146,10 +150,12 @@
             </tr>
             <!-- Aqui va la tabla para clonar -->
             <tr class="hide">
-              <td contenteditable="true">sin n°</td>
-              <td contenteditable="true">Sin título</td>
-              <td contenteditable="true">sin cantidad</td>
-              <td contenteditable="true">Sin fecha</td>
+              <td contenteditable="false"></td>
+              <td contenteditable="false"></td>
+              <td contenteditable="false"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="false">Archivo</td>
+              <td contenteditable="false">o</td>
               <td>
                 <span class="table-remove glyphicon glyphicon-remove"></span>
               </td>
